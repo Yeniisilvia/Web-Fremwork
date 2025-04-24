@@ -223,26 +223,24 @@
             </nav>
             
 
-            <header class="site-header d-flex flex-column justify-content-center align-items-center">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
+            <header class="site-header d-flex flex-column justify-content-center align-items-center py-3">
+    <div class="container">
+        <div class="row justify-content-center align-items-center g-3">
 
-                        <div class="col-lg-5 col-12 mb-5">
-                           
-                            <h2 class="text-white">Karya Siswa <br> SMKN 5  DKV <br>Bandar Lampung</h2>
+            <div class="col-lg-5 col-12 text-center">
+                <h2 class="text-white mb-0">
+                    Karya Siswa <br> SMKN 5 DKV <br> Bandar Lampung
+                </h2>
+            </div>
 
-                            
-                        </div>
+            <div class="col-lg-5 col-12 d-flex justify-content-center">
+                <img src="images/LogoSMK.png" class="img-fluid" alt="Logo SMK" style="max-width: 200px; height: auto;">
+            </div>
 
-                        <div class="col-lg-5 col-12">
-                            <div class="topics-detail-block bg-white shadow-lg">
-                                <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="topics-detail-block-image img-fluid">
-                            </div>
-                        </div>
+        </div>
+    </div>
+</header>
 
-                    </div>
-                </div>
-            </header>
 
 
 

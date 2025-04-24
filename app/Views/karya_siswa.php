@@ -228,11 +228,9 @@
                             
                         </div>
 
-                        <div class="col-lg-5 col-12">
-                            <div class="topics-detail-block bg-white shadow-lg">
-                                <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="topics-detail-block-image img-fluid">
-                            </div>
-                        </div>
+                        <div class="col-lg-5 col-12 d-flex justify-content-center">
+                <img src="images/LogoSMK.png" class="img-fluid" alt="Logo SMK" style="max-width: 200px; height: auto;">
+            </div>
 
                     </div>
                 </div>
@@ -241,19 +239,22 @@
 
             <div class="container py-4 px-3">
             <div class="row row-cols-2 row-cols-md-4 g-3" id="grid">
-                <?php foreach ($users as $user): ?>
-                    <div class="col p-2">
-                        <div class="custom-block bg-white shadow-sm p-2 text-center">
-                            <!-- Menambahkan link dengan ID pengguna (untuk menampilkan detail profil) -->
-                            <a href="<?= base_url('DetailProfile/' . $user['id']) ?>">
-                                <img src="<?= base_url('uploads/' . $user['foto']) ?>" class="custom-block-image img-fluid" style="max-height: 120px; object-fit: cover;" alt="">
-                                <h6 class="mb-1"><?= $user['nama'] ?></h6>
-                                <p class="small mb-0"><?= $user['email'] ?></p>
-                                <p class="small mb-0"><?= $user['tempat_lahir'] ?>, <?= $user['tanggal_lahir'] ?></p>
-                            </a>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+            <?php foreach ($users as $user): ?>
+            <div class="col p-2">
+                <div class="custom-block bg-white shadow-sm p-2 text-center">
+                    <!-- Menambahkan link dengan ID pengguna (untuk menampilkan detail profil) -->
+                    <a href="<?= base_url('DetailProfile/' . $user['id']) ?>">
+                        <img src="/uploads/profile_pictures/<?= $user['foto'] ?>" 
+                             class="custom-block-image img-fluid" 
+                             style="max-height: 100%; object-fit: cover;" 
+                             alt="">
+                        <h6 class="mb-1"><?= $user['nama'] ?></h6>
+                        <p class="small mb-0"><?= $user['email'] ?></p>
+                        <p class="small mb-0"><?= $user['tempat_lahir'] ?>, <?= $user['tanggal_lahir'] ?></p>
+                    </a>
+                </div>
+            </div>
+        <?php endforeach; ?>
             </div>
             </div>
 

@@ -8,7 +8,7 @@ class UserModel extends Model
 {
     protected $table = 'users';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['email', 'password', 'nama', 'foto', 'tanggal_lahir', 'ketrampilan', 'tentang', 'instagram', 'created_at', 'alamat', 'tempat_lahir'];
+    protected $allowedFields = ['email', 'password', 'nama', 'foto', 'tanggal_lahir', 'keterampilan', 'tentang', 'instagram', 'created_at', 'alamat', 'tempat_lahir'];
 
     // Fungsi untuk mengambil 
     // 
@@ -16,7 +16,7 @@ class UserModel extends Model
 
     public function getUserHome()
     {
-        return $this->limit(3)->findAll(); // Mengambil semua data dari tabel users
+        return $this->limit(4)->findAll(); // Mengambil semua data dari tabel users
     }
 
     public function getUser()

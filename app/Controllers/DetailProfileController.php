@@ -15,12 +15,20 @@ class DetailProfileController extends BaseController
 
     public function index(): string
     {
-
         $karyaModel = new KaryaModel();
+        $userModel = new UserModel();
 
-        $userNama = $this->session->get('user_nama'); // Ambil user_nama dari session
-        $data['karya'] = $karyaModel->where('nama_pembuat', $userNama)->findAll();
+        $userId = $this->session->get('user_id');
 
+        // Ambil data user berdasarkan nama
+        $user = $userModel->where('id', $userId)->first();
+
+        if (!$user) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("User tidak ditemukan.");
+        }
+
+        $data['user'] = $user; // Kirim data user ke view
+        $data['karya'] = $karyaModel->where('id', $userId)->findAll();
 
         return view('detail_profile_login', $data);
     }
@@ -31,17 +39,16 @@ class DetailProfileController extends BaseController
         $karyaModel = new KaryaModel();
 
         // Ambil data user berdasarkan ID
-        $data['users'] = $userModel->find($id);
+        $data['user'] = $userModel->find($id);
 
-        if (!$data['users']) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException("Users tidak ditemukan.");
+        if (!$data['user']) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("User tidak ditemukan.");
         }
 
-        // Ambil data karya berdasarkan user yang sedang login
-        $userNama = $this->session->get('user_nama'); // Ambil user_nama dari session
+        // Ambil data karya berdasarkan nama user dari data user yang ditemukan
+        $userNama = $data['user']['nama'];
         $data['karya'] = $karyaModel->where('nama_pembuat', $userNama)->findAll();
 
         return view('detail_profile', $data);
     }
 }
-

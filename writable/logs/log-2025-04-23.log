@@ -1,0 +1,223 @@
+CRITICAL - 2025-04-23 06:17:48 --> ErrorException: Undefined variable $user
+[Method: GET, Route: DetailProfile]
+in APPPATH\Views\detail_profile_login.php on line 254.
+ 1 APPPATH\Views\detail_profile_login.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile_login', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(25): view('detail_profile_login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 06:17:50 --> ErrorException: Undefined variable $user
+[Method: GET, Route: DetailProfile]
+in APPPATH\Views\detail_profile_login.php on line 254.
+ 1 APPPATH\Views\detail_profile_login.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile_login', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(25): view('detail_profile_login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 06:17:50 --> ErrorException: Undefined variable $user
+[Method: GET, Route: DetailProfile]
+in APPPATH\Views\detail_profile_login.php on line 254.
+ 1 APPPATH\Views\detail_profile_login.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile_login', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(25): view('detail_profile_login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 06:17:50 --> ErrorException: Undefined variable $user
+[Method: GET, Route: DetailProfile]
+in APPPATH\Views\detail_profile_login.php on line 254.
+ 1 APPPATH\Views\detail_profile_login.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile_login', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(25): view('detail_profile_login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 06:17:50 --> ErrorException: Undefined variable $user
+[Method: GET, Route: DetailProfile]
+in APPPATH\Views\detail_profile_login.php on line 254.
+ 1 APPPATH\Views\detail_profile_login.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile_login', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(25): view('detail_profile_login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 06:17:51 --> ErrorException: Undefined variable $user
+[Method: GET, Route: DetailProfile]
+in APPPATH\Views\detail_profile_login.php on line 254.
+ 1 APPPATH\Views\detail_profile_login.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile_login', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(25): view('detail_profile_login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 06:17:59 --> ErrorException: Undefined variable $user
+[Method: GET, Route: DetailProfile]
+in APPPATH\Views\detail_profile_login.php on line 254.
+ 1 APPPATH\Views\detail_profile_login.php(254): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php', 254)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile_login', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(25): view('detail_profile_login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 06:39:24 --> ParseError: syntax error, unexpected double-quoted string ">      ", expecting "," or ";"
+[Method: GET, Route: EditProfile]
+in APPPATH\Views\edit_profile.php on line 24.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('edit_profile', [], true)
+ 3 APPPATH\Controllers\AuthController.php(135): view('edit_profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->nampilinFormEdit()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 09:40:26 --> ErrorException: Undefined array key "user_tempat_lahir"
+[Method: GET, Route: DetailProfile/11]
+in APPPATH\Views\detail_profile.php on line 242.
+ 1 APPPATH\Views\detail_profile.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_tempat_lahir"', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php', 242)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(52): view('detail_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->detailUser('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 09:40:28 --> ErrorException: Undefined array key "user_tempat_lahir"
+[Method: GET, Route: DetailProfile/11]
+in APPPATH\Views\detail_profile.php on line 242.
+ 1 APPPATH\Views\detail_profile.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_tempat_lahir"', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php', 242)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(52): view('detail_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->detailUser('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 09:40:31 --> ErrorException: Undefined array key "user_tempat_lahir"
+[Method: GET, Route: DetailProfile/11]
+in APPPATH\Views\detail_profile.php on line 242.
+ 1 APPPATH\Views\detail_profile.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_tempat_lahir"', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php', 242)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(52): view('detail_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->detailUser('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 09:41:14 --> ErrorException: Undefined array key "user_tempat_lahir"
+[Method: GET, Route: DetailProfile/11]
+in APPPATH\Views\detail_profile.php on line 242.
+ 1 APPPATH\Views\detail_profile.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_tempat_lahir"', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php', 242)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(52): view('detail_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->detailUser('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 09:41:15 --> ErrorException: Undefined array key "user_tempat_lahir"
+[Method: GET, Route: DetailProfile/11]
+in APPPATH\Views\detail_profile.php on line 242.
+ 1 APPPATH\Views\detail_profile.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_tempat_lahir"', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php', 242)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(52): view('detail_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->detailUser('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 09:43:07 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: DetailProfile/11]
+in APPPATH\Views\detail_profile.php on line 242.
+ 1 APPPATH\Views\detail_profile.php(242): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php', 242)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(52): view('detail_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->detailUser('11')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')
+CRITICAL - 2025-04-23 09:57:17 --> ErrorException: Undefined array key "Keterampilan"
+[Method: GET, Route: DetailProfile/9]
+in APPPATH\Views\detail_profile.php on line 245.
+ 1 APPPATH\Views\detail_profile.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Keterampilan"', 'C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php', 245)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\project_dkv\\app\\Views\\detail_profile.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('detail_profile', [], true)
+ 5 APPPATH\Controllers\DetailProfileController.php(52): view('detail_profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DetailProfileController->detailUser('9')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_dkv\\public\\index.php')

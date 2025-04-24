@@ -56,6 +56,7 @@ class AuthController extends Controller
         if ($user && password_verify($password, $user['password'])) {
             session()->set([
                 'user_id' => $user['id'],
+                'user_email' => $user['email'],
                 'user_nama' => $user['nama'],
                 'user_foto' => $user['foto'],
                 'user_tanggal_lahir' => $user['tanggal_lahir'],
@@ -94,44 +95,87 @@ class AuthController extends Controller
         ];
 
         if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('error', 'Harap isi semua bidang dengan benar.');
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Harap isi semua bidang dengan benar.'
+            ]);
         }
 
-        // Ambil data dari form
-        $data = [
-            'nama'          => $this->request->getPost('nama'),
-            'email'         => $this->request->getPost('email'),
-            'tempat_lahir'  => $this->request->getPost('tempat_lahir'),
-            'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
-            'instagram'     => $this->request->getPost('instagram'),
-            'alamat'        => $this->request->getPost('alamat'),
-            'tentang'       => $this->request->getPost('tentang')
-        ];
+        try {
+            // Ambil data dari form
+            $data = [
+                'nama'          => $this->request->getPost('nama'),
+                'email'         => $this->request->getPost('email'),
+                'tempat_lahir'  => $this->request->getPost('tempat_lahir'),
+                'tanggal_lahir' => $this->request->getPost('tanggal_lahir'),
+                'instagram'     => $this->request->getPost('instagram'),
+                'alamat'        => $this->request->getPost('alamat'),
+                'keterampilan'  => $this->request->getPost('keterampilan'),
+                'tentang'       => $this->request->getPost('tentang')
+            ];
 
-        // Jika ada upload foto baru
-        $file = $this->request->getFile('foto');
-        if ($file && $file->isValid() && !$file->hasMoved()) {
-            $newName = $file->getRandomName();
-            $file->move('uploads/profile_pictures/', $newName);
-            $data['foto'] = $newName;
+            // Jika ada upload foto baru
+            $file = $this->request->getFile('foto');
+            if ($file && $file->isValid() && !$file->hasMoved()) {
+                $newName = $file->getRandomName();
+                $file->move('uploads/profile_pictures/', $newName);
+                $data['foto'] = $newName;
+            }
+
+            // Update data di database
+            $userModel->updateUserProfile($session->get('user_id'), $data);
+
+            // Perbarui session dengan prefix 'user_'
+            $sessionData = [
+                'user_nama' => $data['nama'],
+                'user_email' => $data['email'],
+                'user_tempat_lahir' => $data['tempat_lahir'],
+                'user_tanggal_lahir' => $data['tanggal_lahir'],
+                'user_instagram' => $data['instagram'],
+                'user_alamat' => $data['alamat'],
+                'user_keterampilan' => $data['keterampilan'],
+                'user_tentang' => $data['tentang']
+            ];
+
+            if (isset($data['foto'])) {
+                $sessionData['user_foto'] = $data['foto'];
+            }
+
+            $session->set($sessionData);
+
+            return $this->response->setJSON([
+                'status' => 'success',
+                'message' => 'Profil berhasil diperbarui'
+            ]);
+
+        } catch (\Exception $e) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+            ]);
         }
-
-        // Update data di database
-        $userModel->updateUserProfile($session->get('user_id'), $data);
-
-        // Perbarui sesi dengan data terbaru
-        $session->set($data);
-
-        return redirect()->to('/edit-users')->with('success', 'Profil berhasil diperbarui.');
     }
 
     public function nampilinFormEdit()
     {
-        $data = [
-            'title' => 'Edit Profile' ,
-            'user' => session()->get()
+        // Ambil data user dari session
+        $userData = [
+            'user_foto' => session()->get('user_foto'),
+            'user_nama' => session()->get('user_nama'),
+            'user_email' => session()->get('user_email'),
+            'user_tempat_lahir' => session()->get('user_tempat_lahir'),
+            'user_tanggal_lahir' => session()->get('user_tanggal_lahir'),
+            'user_instagram' => session()->get('user_instagram'),
+            'user_alamat' => session()->get('user_alamat'),
+            'user_keterampilan' => session()->get('user_keterampilan'),
+            'user_tentang' => session()->get('user_tentang')
         ];
 
-        return view( 'edit_profile', $data);
+        $data = [
+            'title' => 'Edit Profile',
+            'user' => $userData
+        ];
+
+        return view('edit_profile', $data);
     }
 }

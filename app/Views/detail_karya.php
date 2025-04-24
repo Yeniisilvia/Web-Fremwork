@@ -125,6 +125,11 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        .text-justify {
+  text-align: justify;
+  line-height: 1.6;
+}
 </style>
 
     
@@ -213,26 +218,38 @@
             <header class="site-header d-flex flex-column justify-content-center align-items-center" style="height: 80px; padding: 20px 0;">
             </header>
 
-            <section class="topics-detail-section" id="topics-detail">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-12 m-auto text-center">
-                            <h2><?= esc($karya['nama_karya']) ?></h2>
-                            <div class="col-lg-10 col-md-10 col-12 m-auto">
-                                <img src="<?= base_url('uploads/karya/'.$karya['foto']) ?>" 
-                                     class="topics-detail-block-image img-fluid mx-auto d-block w-100"
-                                     style="max-width: 600px; height: auto;">
-                                
-                                <!-- Nama pembuat dan tanggal dibuat -->
-                                <p class="text-muted mt-2"><strong>Oleh:</strong> <?= esc($karya['nama_pembuat']) ?> | 
-                                   <strong>Dibuat:</strong> <?= esc($karya['tanggal_dibuat']) ?></p>
-                            </div>
-                            <br>
-                            <p class="text-start"><?= esc($karya['deskripsi']) ?></p>
-                        </div>
-                    </div>
+            <section class="topics-detail-section py-5" id="topics-detail" style="background-color: #fdfdfd;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+
+                <!-- Judul Karya -->
+                <h2 class="mb-4 text-center" style="font-family: 'Georgia', serif; font-weight: bold; color: #333;">
+                    <?= esc($karya['nama_karya']) ?>
+                </h2>
+
+                <!-- Gambar Karya -->
+                <div class="text-center mb-3">
+                    <img src="<?= base_url('uploads/karya/'.$karya['foto']) ?>"
+                         class="img-fluid rounded shadow-sm"
+                         style="max-width: 350px; height: auto;" 
+                         alt="Gambar karya">
                 </div>
-            </section>
+
+                <!-- Informasi Pembuat -->
+                <p class="text-muted text-center" style="font-family: Arial, sans-serif; font-size: 0.95rem;">
+                    <strong>Oleh:</strong> <?= esc($karya['nama_pembuat']) ?> &nbsp;|&nbsp;
+                    <strong>Dibuat:</strong> <?= esc($karya['tanggal_dibuat']) ?>
+                </p>
+
+                <!-- Deskripsi -->
+                <div class="mt-4" style="font-family: 'Arial', sans-serif; font-size: 1rem; text-align: justify; line-height: 1.8; color: #444;">
+                    <?= esc($karya['deskripsi']) ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         </main>
 
 

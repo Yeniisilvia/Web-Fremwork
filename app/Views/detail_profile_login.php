@@ -228,71 +228,71 @@
             </section>
 
 
-            <section class="featured-section">
-                <div class="container">
-                    <div class="row justify-content-center gap-4 align-items-stretch">
-                        
-                        <!-- Card Informasi Pribadi -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="custom-block bg-white shadow-lg p-3 h-100">
-                                <h5 class="mb-2"><?= session()->get('user_nama'); ?></h5>
-                                <p><?= session()->get(key: 'user_tempat_lahir'); ?>, <?= session()->get('user_tanggal_lahir'); ?></p>
-                                <h5>Ketrampilan:</h5>
-                                <p>dummy: Desain Grafis</p> 
-                            </div>
-                        </div>
+            <section class="featured-section py-5">
+    <div class="container">
+        <div class="row justify-content-center g-4">
             
-                        <!-- Card Gambar & Sosial Media -->
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="custom-block custom-block-overlay h-100">
-                                <div class="d-flex flex-column h-100">
-                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" 
-                                         class="custom-block-image img-fluid" 
-                                         alt="">
-            
-                                    <div class="social-share d-flex justify-content-center mt-3">
-                                        <ul class="social-icon d-flex gap-2">
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-instagram"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
+            <!-- Card Informasi Pribadi -->
+            <div class="col-lg-5 col-md-6 col-12">
+                <div class="custom-block bg-white shadow-lg p-4 h-100 rounded-4">
+                    <h5 class="mb-2" style="font-family: Arial, sans-serif; font-weight: 600; font-size: 1.3rem;">
+                        <?= $user['nama']; ?>
+                    </h5>
+                    <p style="font-family: Arial, sans-serif; font-size: 1rem;">
+                       <?= $user['email']; ?>
+                    </p>
+                    <p style="font-family: Arial, sans-serif; font-size: 1rem;">
+                        <?= $user['tempat_lahir']; ?>, <?= $user['tanggal_lahir']; ?>
+                    </p>
+                    <p style="font-family: Arial, sans-serif; font-size: 1rem;">
+                       <?= $user['alamat']; ?>
+                    </p>
+                    <p style="font-family: Arial, sans-serif; font-size: 1rem;">
+                        <?= $user['keterampilan']; ?>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card Foto & Sosial Media -->
+            <div class="col-lg-5 col-md-6 col-12 d-flex justify-content-center">
+                <div class="custom-block bg-white shadow-lg p-4 rounded-4 w-100 text-center">
+                <img src="/uploads/profile_pictures/<?= $user['foto'] ?>" 
+                alt="Foto Profil"
+                class="img-fluid"
+                style="width: 240px; height: 300px; object-fit: cover; object-position: top; border-radius: 12px; border: 4px solid #eee; background-color: #fff;">
+
+                    <div class="social-share d-flex justify-content-center mt-3">
+                        <ul class="social-icon d-flex gap-2 list-unstyled mb-0">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram" target="_blank" rel="noopener noreferrer"></a>
+                            </li>
+                        </ul>
                     </div>
-            
-                    <!-- Jarak antara card -->
-                    <br><br><br><br><br><br>
-            
+                </div>
+            </div>
+
+            <!-- Card Tentang Siswa -->
+            <div class="col-lg-10 col-md-12 col-12 text-center">
+                <div class="custom-block bg-white shadow-lg p-4 rounded-4 mt-3">
+                    <h5 style="font-family: Arial, sans-serif; font-weight: 600; font-size: 1.3rem;">
+                        Tentang Siswa
+                    </h5>
+                    <p style="font-family: Arial, sans-serif; font-size: 1rem;">
+                    <p style="font-family: Arial, sans-serif; font-size: 1rem;">
+                    <?= $user['tentang']; ?>
                     
+<!-- Tombol Edit -->
+<div class="mt-3">
+                        <a href="<?= base_url('/EditProfile'); ?>" class="btn btn-warning px-4">Edit</a>
+                    </div>
 
+                </div>
+            </div>
 
-<div class="row justify-content-center">
-    <div class="col-lg-8 col-md-10 col-12 text-center">
-        <div class="custom-block bg-white shadow-lg p-4">
-            <h5 class="text-center">Tentang Siswa</h5>
-            <p>dummy: Saya percaya bahwa desain bukan hanya soal tampilan yang indah, tetapi juga bagaimana komunikasi visual dapat menyampaikan pesan secara efektif.</p>
         </div>
     </div>
+</section>
 
-    <!-- Tombol Edit -->
-    <div class="col-12 text-center mt-3">
-        <a href="<?= base_url('/EditProfile'); ?>" class="btn btn-warning">Edit</a>
-    </div>
-</div>
-
-</div>
-
-
-            
-                </div>
-            </section>
-            
-            
-
-            
 
 
             <br>
@@ -472,7 +472,7 @@ function logout() {
     .then(data => {
         if (data.success) {
             alert(data.success);
-            window.location.reload(); // Refresh halaman setelah logout
+            window.location.href = "<?= base_url('/') ?>";
         }
     });
 }

@@ -23,6 +23,8 @@
 
         <link  rel="stylesheet" href="<?= base_url('assets/css/templatemo-topic-listing.css') ?>">      
         
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -132,6 +134,19 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        .logo-img {
+    max-height: 440px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
 </style>
 
     
@@ -145,7 +160,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
                         <i class="bi-back"></i>
-                        <span>Topic</span>
+                        <span>Portofolio</span>
                     </a>
 
                     <div class="d-lg-none ms-auto me-4">
@@ -209,10 +224,8 @@
                                 <a onclick="openLoginModal()" style="color: white;">Login</a>
                             <?php endif; ?>
                         </div>       
-
-
-                        </div>
                     </div>
+
                     <a class="bi-list" 
                     onclick="toggleMenu()" 
                     style="padding-left: 20px; font-size: 30px; transition: transform 0.3s, color 0.3s;" 
@@ -223,6 +236,15 @@
                 </div>
             </nav>
             
+
+            <div class="container mt-3">
+                <?php if (session()->getFlashdata('message')) : ?>
+                    <div class="alert <?= session()->getFlashdata('alert-class') ?> alert-dismissible fade show" role="alert">
+                        <?= session()->getFlashdata('message') ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                <?php endif; ?>
+            </div>
 
             <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
                 <div class="container">
@@ -242,53 +264,41 @@
 
 
             <section class="featured-section">
-                <div class="container">
-                    <div class="row justify-content-center">
+            <div class="container py-5">
+  <div class="row justify-content-center align-items-stretch">
 
-                        <div class="col-lg-4 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">Web Design</h5>
+    <!-- CARD TENTANG SEKOLAH -->
+    <div class="col-lg-5 mb-4 d-flex">
+      <div class="custom-block bg-white shadow-lg rounded-4 p-4 w-100">
+        <h5 class="mb-3 text-primary">Tentang Sekolah</h5>
+        <p class="text-muted mb-2">
+          <strong>SMKN 5 Bandar Lampung</strong> adalah sekolah kejuruan berbasis seni dan keterampilan yang mendorong kreativitas dan kesiapan kerja siswa melalui pembelajaran praktik.
+        </p>
+        <p class="text-muted mb-2">
+          Memiliki tujuh jurusan: <strong>TKRO, TBSM, DKV, Animasi, Kriya Tekstil, Kriya Logam</strong>, dan <strong>Kriya Kayu</strong>.
+        </p>
+        <p class="text-muted">
+          Jurusan <strong>DKV</strong> membekali siswa dengan kemampuan desain grafis, ilustrasi, dan pembuatan konten visual menggunakan software desain modern.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-4 d-flex">
+  <div class="custom-block bg-light shadow-lg rounded-4 p-4 w-100 d-flex flex-column align-items-center justify-content-between text-center" style="height: auto; min-height: 100%;">
+    
+    <!-- Bungkus logo dalam kotak yang tinggi tetap -->
+<div class="d-flex justify-content-center align-items-center flex-grow-1" style="height: 300px;">
+  <img src="<?= base_url('images/LogoSMK.PNG'); ?>" class="logo-img rounded-3" alt="Logo SMKN 5">
+</div>
 
-                                            <p class="mb-0">When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
-                                        </div>
+    <!-- Social icons -->
+    <div class="social-share d-flex justify-content-center gap-3 mt-4">
+      <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-pinterest"></i></a>
+    </div>
 
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="custom-block custom-block-overlay">
-                                <div class="d-flex flex-column h-100">
-                                <img src="<?= base_url('images/logoSMK.png'); ?>" class="custom-block-image img-fluid" alt="" style="width: 500px; height: auto;">
-
-                                    <div class="social-share d-flex">
-                                        
-                                        <ul class="social-icon">
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-twitter"></a>
-                                            </li>
-
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-facebook"></a>
-                                            </li>
-
-                                            <li class="social-icon-item">
-                                                <a href="#" class="social-icon-link bi-pinterest"></a>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-
-                                    <!-- <div class="section-overlay"></div> -->
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+  </div>
+</div>
             </section>
 
 
@@ -298,7 +308,7 @@
                     <div class="row">
 
                         <div class="col-12 text-center">
-                            <h2 class="mb-4">Karya Siswa</h1>
+                            <h1 class="mb-4">Karya Siswa</h1>
                         </div>
 
                     </div>
@@ -312,9 +322,9 @@
                 <div class="custom-block bg-white shadow-sm p-2 text-center">
                     <!-- Menambahkan link dengan ID pengguna (untuk menampilkan detail profil) -->
                     <a href="<?= base_url('/KaryaSiswa') ?>">
-                        <img src="<?= base_url('uploads/' . $user['foto']) ?>" 
+                        <img src="/uploads/profile_pictures/<?= $user['foto'] ?>" 
                              class="custom-block-image img-fluid" 
-                             style="max-height: 120px; object-fit: cover;" 
+                             style="max-height: 100%; object-fit: cover;" 
                              alt="">
                         <h6 class="mb-1"><?= $user['nama'] ?></h6>
                         <p class="small mb-0"><?= $user['email'] ?></p>
@@ -345,26 +355,26 @@
 
                 <div class="row row-cols-1 row-cols-md-2 g-3 p-3" id="grid">
                 <?php foreach ($karya as $k): ?>
-                    <div class="col">
-                        <div class="custom-block custom-block-topics-listing bg-white shadow-lg p-3">
-                            <div class="d-flex">
-                                <img src="<?= base_url('uploads/karya/'.$k['foto']) ?>" class="custom-block-image img-fluid" alt="">
+                        <div class="col" onclick="location.href='<?= base_url('/JelajahKarya'); ?>'" style="cursor:pointer;">
+                            <div class="custom-block custom-block-topics-listing bg-white shadow-lg p-3">
+                                <div class="d-flex">
+                                    <img src="<?= base_url('uploads/karya/' . esc($k['foto'])) ?>" class="custom-block-image img-fluid" alt="">
 
-                                <div class="custom-block-topics-listing-info d-flex">
-                                    <div>
-                                        <p class="mb-2"><strong>Oleh:</strong> <?= $k['nama_pembuat'] ?></p>
-                                        <h5 class="mb-2"><?= $k['nama_karya'] ?></h5>
-                                        <p class="mb-1"><strong>Dibuat:</strong> <?= $k['tanggal_dibuat'] ?></p>
-                                        <p class="mb-0">
-                                            <?= strlen($k['deskripsi']) > 25 ? substr($k['deskripsi'], 0, 25) . '...' : $k['deskripsi'] ?>
-                                        </p>
-                                        <a href="<?= base_url('DetailKarya/' . $k['id']) ?>" class="btn custom-btn mt-3">Lihat Detail</a>
+                                    <div class="custom-block-topics-listing-info d-flex">
+                                        <div>
+                                            <p class="mb-2"><strong>Oleh:</strong> <?= esc($k['nama_pembuat']) ?></p>
+                                            <h5 class="mb-2"><?= esc($k['nama_karya']) ?></h5>
+                                            <p class="mb-1"><strong>Dibuat:</strong> <?= esc($k['tanggal_dibuat']) ?></p>
+                                            <p class="mb-0">
+                                                <?= strlen($k['deskripsi']) > 25 ? esc(substr($k['deskripsi'], 0, 25)) . '...' : esc($k['deskripsi']) ?>
+                                            </p>
+                                            <a href="<?= base_url('DetailKarya/' . $k['id']) ?>" class="btn custom-btn mt-3">Lihat Detail</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
             </div>
 
             
@@ -378,7 +388,7 @@
                     <div class="row">
 
                         <div class="col-12 text-center">
-                            <h2 class="text-white mb-4">Jurusan DKV SMKN 5 Bandar Lampung</h1>
+                            <h2 class="text-white mb-4">Jurusan DKV SMKN 5 Bandar Lampung</h2>
                         </div>
 
                         <div class="col-lg-10 col-12 mx-auto">
@@ -498,16 +508,15 @@
             <label>Konfirmasi Password</label>
             <input type="password" id="registerConfirmPassword" placeholder="Konfirmasi Password Anda">
             <div style="display: flex; gap: 10px;">
-    <div style="flex: 1;">
-        <label>Tempat Lahir</label>
-        <input type="text" id="registerTempatLahir" placeholder="Tempat Lahir Anda" style="width: 100%; padding: 8px;">
-    </div>
-    <div style="flex: 1;">
-        <label>Tanggal Lahir</label>
-        <input type="date" id="registerTanggalLahir" style="width: 100%; padding: 8px;">
-    </div>
-</div>
-
+                <div style="flex: 1;">
+                    <label>Tempat Lahir</label>
+                    <input type="text" id="registerTempatLahir" placeholder="Tempat Lahir Anda" style="width: 100%; padding: 8px;">
+                </div>
+                <div style="flex: 1;">
+                    <label>Tanggal Lahir</label>
+                    <input type="date" id="registerTanggalLahir" style="width: 100%; padding: 8px;">
+                </div>
+            </div>
             <button onclick="register()">Daftar</button>
         </div>
     </div>
@@ -515,35 +524,32 @@
 
 
 <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-        }
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
 
-        function toggleUser() {
-            var menu = document.getElementById("user");
-            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-        }
+function toggleUser() {
+    var menu = document.getElementById("user");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
 
-        function openLoginModal() {
-            document.getElementById("loginModal").style.display = "flex";
-            document.getElementById("loginForm").style.display = "block";
-            document.getElementById("registerForm").style.display = "none";
-            document.getElementById("modalTitle").innerText = "LOGIN";
-        }
+function openLoginModal() {
+    document.getElementById("loginModal").style.display = "flex";
+    document.getElementById("loginForm").style.display = "block";
+    document.getElementById("registerForm").style.display = "none";
+    document.getElementById("modalTitle").innerText = "LOGIN";
+}
 
-        function closeLoginModal() {
-            document.getElementById("loginModal").style.display = "none";
-        }
+function closeLoginModal() {
+    document.getElementById("loginModal").style.display = "none";
+}
 
-        function showRegisterMenu() {
-            document.getElementById("loginForm").style.display = "none";
-            document.getElementById("registerForm").style.display = "block";
-            document.getElementById("modalTitle").innerText = "DAFTAR";
-        }
-    </script>
-
-<script>
+function showRegisterMenu() {
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("registerForm").style.display = "block";
+    document.getElementById("modalTitle").innerText = "DAFTAR";
+}
 function login() {
     let email = document.getElementById("loginEmail").value;
     let password = document.getElementById("loginPassword").value;
@@ -559,8 +565,12 @@ function login() {
             alert(data.success);
             window.location.reload();
         } else {
-            alert(data.error);
+            alert(data.error || "Login gagal. Silakan coba lagi.");
         }
+    })
+    .catch(error => {
+        console.error("Login error:", error);
+        alert("Terjadi kesalahan saat login. Silakan coba lagi nanti.");
     });
 }
 
@@ -572,10 +582,10 @@ function register() {
     let tempatLahir = document.getElementById("registerTempatLahir").value;
     let tanggalLahir = document.getElementById("registerTanggalLahir").value;
 
-    fetch("<?= base_url('/register') ?>", {
+    fetch("/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nama: nama, email: email, password: password, confirm_password: confirmPassword, tempat_lahir: tempatLahir,tanggal_lahir:tanggalLahir })
+        body: JSON.stringify({ nama: nama, email: email, password: password, confirm_password: confirmPassword, tempat_lahir: tempatLahir, tanggal_lahir: tanggalLahir })
     })
     .then(response => response.json())
     .then(data => {
@@ -583,33 +593,46 @@ function register() {
             alert(data.success);
             window.location.reload();
         } else {
-            alert(Object.values(data.error).join("\n"));
+            alert(Object.values(data.error).join("\n") || "Registrasi gagal.");
         }
+    })
+    .catch(error => {
+        console.error("Register error:", error);
+        alert("Terjadi kesalahan saat registrasi. Silakan coba lagi nanti.");
     });
 }
 
-
 function logout() {
-    fetch("<?= base_url('/logout') ?>")
+    fetch("/logout")
     .then(response => response.json())
     .then(data => {
         if (data.success) {
             alert(data.success);
-            window.location.reload(); // Refresh halaman setelah logout
+            window.location.reload();
         }
     });
 }
-
 </script>
 
+<!-- JAVASCRIPT FILES -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/click-scroll.js"></script>
+<script src="js/custom.js"></script>
 
+<script>
+    // Auto hide alert after 3 seconds
+    document.addEventListener('DOMContentLoaded', function() {
+        var alerts = document.querySelectorAll('.alert');
+        alerts.forEach(function(alert) {
+            setTimeout(function() {
+                var bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+            }, 300);
+        });
+    });
+</script>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/custom.js"></script>
-
-    </body>
+</body>
 </html>
